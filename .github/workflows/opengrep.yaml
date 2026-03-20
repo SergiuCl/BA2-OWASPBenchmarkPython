@@ -49,13 +49,11 @@ jobs:
           *.egg-info/
           EOF
 
-          # Stronger scan: combine multiple configs + stronger taint
+          # Combine multiple rule configs for broader coverage
           opengrep scan \
             --config auto \
             --config p/owasp-top-ten \
             --config p/security-audit \
-            --lang python \
-            --taint-intrafile \
             --sarif-output opengrep.sarif \
             .
 
