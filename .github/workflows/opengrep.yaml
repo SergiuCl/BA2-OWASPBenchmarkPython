@@ -54,6 +54,7 @@ jobs:
             --config auto \
             --config p/owasp-top-ten \
             --config p/security-audit \
+            --include='*.py' \
             --sarif-output opengrep.sarif \
             .
 
